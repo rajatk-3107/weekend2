@@ -9,7 +9,8 @@ var addPerson = (req, res) => {
         new dbPerson({
             name: req.body.name,
             age: req.body.age,
-            email: req.body.email
+            email: req.body.email,
+            createdBy: req.decoded.email
         }).save((err, savedData) => {
             if (err) {
                 res.json({

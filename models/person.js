@@ -14,13 +14,7 @@ var person = new Schema({
         type: Number,
         default: 20
     },
-    address: [{
-        addressLine1: String,
-        addressLine2: String,
-        city: String,
-        state: String,
-        pincode: Number
-    }]
+    createdBy: String
 })
 
 module.exports = mongoose.model('people', person)

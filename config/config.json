@@ -1,3 +1,4 @@
 {
-    "mongo": "mongodb://localhost/test1"
+    "mongo": "mongodb://localhost/test1",
+    "key": "fgdhfhgwuo6575gsd5"
 }

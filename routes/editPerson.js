@@ -7,7 +7,7 @@ var edit = (req, res) => {
             msg: "Please enter all details"
         })
     } else {
-        dbPerson.findOneAndUpdate({ _id: req.body.personId }, {
+        dbPerson.findOneAndUpdate({ _id: req.body.personId, createdBy: req.decoded.email }, {
             $set: { name: req.body.name, age: req.body.age }
         }, (err, updated) => {
             if (err) {

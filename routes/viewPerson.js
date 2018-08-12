@@ -1,7 +1,7 @@
 var dbPerson = require('../models/person')
 
 var viewPerson = (req, res) => {
-    dbPerson.find({}, (err, persons) => {
+    dbPerson.find({ createdBy: req.decoded.email }, (err, persons) => {
         if (err) {
             res.json({
                 success: false,
