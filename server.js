@@ -24,6 +24,6 @@ app.use((req, res) => {
     res.sendfile(__dirname + '/dist/index.html')
 })
 
-app.listen(4000, () => {
+app.listen(process.env.PORT || 5000, () => {
     console.log("Server Started.")
 })
